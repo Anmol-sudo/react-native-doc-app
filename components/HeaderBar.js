@@ -32,7 +32,7 @@ function HeaderBar(props) {
           style={[styles.navbar_icon, { marginEnd: 10 }]}
           onPress={() => console.log("Button pressed")}
         >
-          <Ionicons name="menu" size={40} color="white" />
+          <Ionicons name="menu" size={32} color="white" />
         </TouchableOpacity>
         <View style={styles.navbar_brand}>
           <TouchableOpacity onPress={handleLogoPress}>
@@ -46,7 +46,7 @@ function HeaderBar(props) {
           style={[styles.navbar_icon, { backgroundColor: "#1b1b1d" }]}
           onPress={() => console.log("Button pressed")}
         >
-          <Ionicons name="search" size={22} color="white" style={styles.icon} />
+          <Ionicons name="search" size={20} color="white" style={styles.icon} />
         </TouchableOpacity>
       </View>
     </View>
@@ -57,8 +57,6 @@ const styles = StyleSheet.create({
   container: {
     width: "100%",
     height: 63.75,
-    borderWidth: 2,
-    borderColor: "black",
     backgroundColor: "#20232a",
   },
   navbar_items: {
@@ -71,10 +69,9 @@ const styles = StyleSheet.create({
   navbar_icon: {
     width: 40,
     height: 40,
-    // backgroundColor: "black",
     borderRadius: 5,
     justifyContent: "center",
-    alignItems: "center",
+    paddingInlineStart: 4
   },
   navbar_brand: {
     flex: 1,

@@ -57,7 +57,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "flex-end", // This will space out the buttons
     height: 50,
-    marginHorizontal: 4,
   },
   twitter: {
     flexDirection: "row",

@@ -8,8 +8,8 @@ import {
 
 import AnnouncementBar from "../components/AnnouncementBar";
 import HeaderBar from "../components/HeaderBar";
-import SocialLinks from "../components/SocialLinks";
-import MainContent from "../components/MainContent";
+
+import FeatureCard from "../components/FeatureCard";
 
 const logo = {
   uri: "https://reactnative.dev/img/tiny_logo.png",
@@ -56,8 +56,7 @@ function HomeScreen(props) {
         )}
         scrollEventThrottle={16}
       >
-        <SocialLinks />
-        <MainContent />
+        <FeatureCard />
       </ScrollView>
     </View>
   );
@@ -66,6 +65,7 @@ function HomeScreen(props) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: "#1b1b1d",
   },
   headerContainer: {
     position: "absolute",
@@ -73,7 +73,7 @@ const styles = StyleSheet.create({
     left: 0,
     right: 0,
     zIndex: 1,
-    backgroundColor: "white", // Add a background color to prevent content from showing through
+    backgroundColor: "#1b1b1d", // Add a background color to prevent content from showing through
   },
   scrollView: {
     flex: 1,

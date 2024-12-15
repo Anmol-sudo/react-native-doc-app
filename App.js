@@ -4,7 +4,7 @@ import { StatusBar } from "react-native";
 
 export default function App() {
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: "#1b1b1d" }}>
+    <SafeAreaView style={{ flex: 1 }}>
       <HomeScreen />
       <StatusBar barStyle="dark-content" />
     </SafeAreaView>
