@@ -8,14 +8,8 @@ import {
 
 import AnnouncementBar from "../components/AnnouncementBar";
 import HeaderBar from "../components/HeaderBar";
-
-import FeatureCard from "../components/FeatureCard";
-
-const logo = {
-  uri: "https://reactnative.dev/img/tiny_logo.png",
-  width: 64,
-  height: 64,
-};
+import FeatureCard from "../components/FeatureCard/FeatureCard";
+import ImageBanner from "../components/FeatureCard/components/ImageBanner";
 
 function HomeScreen(props) {
   const scrollY = new Animated.Value(0);
@@ -35,7 +29,6 @@ function HomeScreen(props) {
 
   return (
     <View style={styles.container}>
-      <StatusBar style="auto" />
       <Animated.View
         style={[
           styles.headerContainer,
@@ -57,7 +50,9 @@ function HomeScreen(props) {
         scrollEventThrottle={16}
       >
         <FeatureCard />
+        {/* <ImageBanner /> */}
       </ScrollView>
+      <StatusBar style="dark" />
     </View>
   );
 }
@@ -65,7 +60,7 @@ function HomeScreen(props) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#1b1b1d",
+    backgroundColor: "#1b1b1d", // Add a background color to prevent content from showing through
   },
   headerContainer: {
     position: "absolute",
