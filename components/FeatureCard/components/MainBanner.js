@@ -1,13 +1,13 @@
 import React from "react";
-import {
-  View,
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-} from "react-native";
+import { View, StyleSheet, Text, TouchableOpacity } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
+import { useFonts, Montserrat_700Bold } from "@expo-google-fonts/montserrat";
 
 function MainBanner(props) {
+  let [fontsLoaded] = useFonts({
+    Montserrat_700Bold,
+  });
+  
   return (
     <View style={styles.content}>
       <View style={styles.iconContainer}>

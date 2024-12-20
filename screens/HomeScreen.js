@@ -10,6 +10,7 @@ import AnnouncementBar from "../components/AnnouncementBar";
 import HeaderBar from "../components/HeaderBar";
 import FeatureCard from "../components/FeatureCard/FeatureCard";
 import ImageBanner from "../components/FeatureCard/components/ImageBanner";
+import HeroSection from "../components/HeroSection";
 
 function HomeScreen(props) {
   const scrollY = new Animated.Value(0);
@@ -50,7 +51,7 @@ function HomeScreen(props) {
         scrollEventThrottle={16}
       >
         <FeatureCard />
-        {/* <ImageBanner /> */}
+        <HeroSection />
       </ScrollView>
       <StatusBar style="dark" />
     </View>
