@@ -11,6 +11,7 @@ import HeaderBar from "../components/HeaderBar";
 import FeatureCard from "../components/FeatureCard/FeatureCard";
 import ImageBanner from "../components/FeatureCard/components/ImageBanner";
 import HeroSection from "../components/HeroSection";
+import CodeBlock from "../components/CodeBlock";
 
 function HomeScreen(props) {
   const scrollY = new Animated.Value(0);
@@ -52,6 +53,7 @@ function HomeScreen(props) {
       >
         <FeatureCard />
         <HeroSection />
+        <CodeBlock />
       </ScrollView>
       <StatusBar style="dark" />
     </View>

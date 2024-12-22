@@ -1,11 +1,15 @@
 import React from "react";
-import { View, StyleSheet, Text } from "react-native";
+import { View, StyleSheet, Text, ActivityIndicator } from "react-native";
 import { useFonts, Montserrat_700Bold } from "@expo-google-fonts/montserrat";
 
 function HeroSection(props) {
   let [fontsLoaded] = useFonts({
     Montserrat_700Bold,
   });
+
+    if (!fontsLoaded) {
+      return <ActivityIndicator size="small" color="#0000ff" />;
+    }
 
   return (
     <View style={styles.container}>
@@ -24,15 +28,14 @@ function HeroSection(props) {
 const styles = StyleSheet.create({
   container: {
     width: "100%",
-    height: 450,
+    height: 430,
     backgroundColor: "#18181a",
     alignItems: "center",
     justifyContent: "center",
   },
   heading: {
-    borderWidth: 2,
     borderColor: "transparent",
-    width: "95%",
+    width: "92%",
     textAlign: "center",
     color: "white",
     fontSize: 48,
@@ -47,7 +50,7 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: 400,
     lineHeight: "150%",
-    width: "95%",
+    width: "90%",
     textAlign: "center",
   },
 });
